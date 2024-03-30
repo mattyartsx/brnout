@@ -1,0 +1,111 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, ol, li, form, label, input, button, table, th, td, a {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333333; /* Darker gray background */
+    color: #CCCCCC; /* Light gray text color */
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #555555; /* Darker gray border */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #FF5555; /* Red table header */
+    color: white;
+}
+
+/* Adjust width for specific headers */
+th:nth-child(2),
+th:nth-child(6) {
+    width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
+}
+
+/* Center the buttons in their respective cells */
+td button {
+    display: block;
+    margin: 0 auto;
+}
+
+tr.out-of-stock {
+    background-color: rgba(255, 0, 0, 0.1); /* Light red background for out of stock rows */
+}
+
+button {
+    background-color: #FF5555; /* Red buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #CC0000; /* Darker red on hover */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #CCCCCC; /* Light gray label text */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555555; /* Darker gray border */
+    border-radius: 4px;
+    background-color: #444444; /* Darker gray input background */
+    color: #CCCCCC; /* Light gray text color */
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+
+/* Make links red */
+a {
+    color: #FF5555;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    table {
+        margin-top: 40px;
+    }
+}
