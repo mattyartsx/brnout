@@ -39,6 +39,12 @@ th:nth-child(2),
 th:nth-child(6) {
     width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
 }
+th:nth-child(5) {
+    width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
+}
+th:nth-child(4) {
+    width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
+}
 
 /* Center the buttons in their respective cells */
 td button {
@@ -85,9 +91,7 @@ input[type="url"] {
     color: #CCCCCC; /* Light gray text color */
 }
 
-button[type="submit"] {
-    width: 100%;
-}
+
 
 /* Make links red */
 a {

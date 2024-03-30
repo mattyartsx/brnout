@@ -92,42 +92,23 @@ function removeStock(productName) {
 </head>
 <body>
 
-  <a href="http://sklad.brnout.cz/pridani.php">
-     <button>Přidat Produkt</button>
-  </a>
-
-
-<table id="productTable">
-<tr>
-<th>Produkt</th>
-<th>Počet kusů</th>
-<th>Cena</th>
-<th>Odkaz</th>
-<th>Přidat</th>
-<th>Odebrat</th>
-</tr>
-
-<?php foreach ($products as $product): ?>
-<tr <?php if ($product['count'] < 1) echo 'class="out-of-stock"'; ?>>
-<td><?php echo $product['name']; ?></td>
-<td id="<?php echo $product['name']; ?>-count"><?php echo $product['count']; ?></td>
-<td>CZK <?php echo $product['price']; ?></td>
-<td><a href="<?php echo $product['link']; ?>" target="_blank">Odkaz</a></td>
-<td>
-<form method="post" action="">
-<input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
-<input type="hidden" name="product_count" value="1">
-<input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
-<input type="hidden" name="product_link" value="<?php echo $product['link']; ?>">
-<button type="submit">Přidat</button>
-</form>
-</td>
-<td>
-<button onclick="removeStock('<?php echo $product['name']; ?>')">Odebrat</button>
-</td>
-</tr>
-<?php endforeach; ?>
 </table>
+<a href="http://sklad.brnout.cz/">
+   <button>Zpět na přehled</button>
+</a>
+<form method="post" action="">
+<h2>Přidání produktu</h2>
+<label for="pname">Produkt</label>
+<input type="text" id="pname" name="product_name" required>
+<label for="pcount">Počet kusů</label>
+<input type="number" id="pcount" name="product_count" value="1" min="1" required>
+<label for="pprice">Cena</label>
+<input type="number" id="pprice" name="product_price" step="0.01" required>
+<label for="plink">Odkaz</label>
+<input type="url" id="plink" name="product_link" required>
+<button type="submit">Přidat produkt</button>
+
+</form>
 
 
 </body>
