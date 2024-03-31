@@ -5,20 +5,30 @@ $products = json_decode(file_get_contents($products_file), true);
 
 // Add or update products
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (!empty($_POST["product_name"])) {
+    if (!empty($_POST["product_name"]) && !empty($_POST["product_id"])) {
+        $product_id = $_POST["product_id"];
         $product_name = $_POST["product_name"];
         $product_count = $_POST["product_count"];
         $product_price = $_POST["product_price"];
         $product_link = $_POST["product_link"];
 
         // Check if product already exists
-        $existing_key = array_search($product_name, array_column($products, 'name'));
+        $existing_key = array_search($product_id, array_column($products, 'id'));
         if ($existing_key !== false) {
-            // Update existing product
-            $products[$existing_key]['count'] += $product_count;
+            // Product with the same ID already exists
+            // You can choose to update the existing product or display an error message
+            // For simplicity, let's assume we update the existing product
+            $products[$existing_key] = array(
+                'id' => $product_id,
+                'name' => $product_name,
+                'count' => $product_count,
+                'price' => $product_price,
+                'link' => $product_link
+            );
         } else {
-            // Add new product
+            // Add new product with specified ID
             $products[] = array(
+                'id' => $product_id,
                 'name' => $product_name,
                 'count' => $product_count,
                 'price' => $product_price,
@@ -58,13 +68,16 @@ usort($products, function($a, $b) {
     return $a['count'] - $b['count'];
 });
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brnout Sklad</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style_pridani.css">
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script>
 function removeStock(productName) {
     fetch('index.php', {
@@ -97,18 +110,20 @@ function removeStock(productName) {
    <button>Zpět na přehled</button>
 </a>
 <form method="post" action="">
-<h2>Přidání produktu</h2>
-<label for="pname">Produkt</label>
-<input type="text" id="pname" name="product_name" required>
-<label for="pcount">Počet kusů</label>
-<input type="number" id="pcount" name="product_count" value="1" min="1" required>
-<label for="pprice">Cena</label>
-<input type="number" id="pprice" name="product_price" step="0.01" required>
-<label for="plink">Odkaz</label>
-<input type="url" id="plink" name="product_link" required>
-<button type="submit">Přidat produkt</button>
-
+    <h2>Přidání produktu</h2>
+    <label for="pid">ID</label>
+    <input type="text" id="pid" name="product_id" required>
+    <label for="pname">Produkt</label>
+    <input type="text" id="pname" name="product_name" required>
+    <label for="pcount">Počet kusů</label>
+    <input type="number" id="pcount" name="product_count" value="1" min="1" required>
+    <label for="pprice">Cena</label>
+    <input type="number" id="pprice" name="product_price" step="0.01" required>
+    <label for="plink">Odkaz</label>
+    <input type="url" id="plink" name="product_link" required>
+    <button type="submit">Přidat produkt</button>
 </form>
+
 
 
 </body>

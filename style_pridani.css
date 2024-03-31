@@ -27,7 +27,7 @@ table {
 th, td {
     border: 1px solid #555555; /* Darker gray border */
     padding: 8px;
-
+    text-align: left;
 }
 
 th {
@@ -36,26 +36,21 @@ th {
 }
 
 /* Adjust width for specific headers */
-th:nth-child(3){ width: 120px;}
+th:nth-child(2),
 th:nth-child(6) {
     width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
 }
 th:nth-child(5) {
-    width: 200px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
+    width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
 }
 th:nth-child(4) {
     width: 80px; /* Set the width of the "Počet kusů" and "Odebrat" headers */
 }
-th:nth-child(1){ width: 40px;}
-th:nth-child(7){ width: 80px;}
+
 /* Center the buttons in their respective cells */
 td button {
     display: block;
     margin: 0 auto;
-}
-
-td form {
-    display: flex;
 }
 
 tr.out-of-stock {
@@ -88,13 +83,16 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="url"] {
+    width: 100%;
     padding: 10px;
-    margin-right: 10px; /* Add margin between input field and button */
+    margin-bottom: 10px;
     border: 1px solid #555555; /* Darker gray border */
-    border-radius: 0px;
+    border-radius: 4px;
     background-color: #444444; /* Darker gray input background */
     color: #CCCCCC; /* Light gray text color */
 }
+
+
 
 /* Make links red */
 a {

@@ -1,20 +1,142 @@
 [
     {
-        "name": "Primalex zinkový opravný 400ml",
-        "count": 10,
-        "price": "245,50",
-        "link": "https://www.unihobby.cz/sprej-primalex-zinkovy-opravny-400ml"
+        "id": "3",
+        "name": "Green Tea Extract Capsules",
+        "count": "60",
+        "price": "20",
+        "link": "https://www.example.com"
     },
     {
-        "name": "\u010cern\u00fd Sprej 250ml",
-        "count": 2,
-        "price": "890",
-        "link": "http:\/\/brnout.cz\/"
+        "id": "4",
+        "name": "Vitamin B12 Sublingual Tablets",
+        "count": "90",
+        "price": "15",
+        "link": "https://www.example.com"
     },
     {
-        "name": "Produkt",
-        "count": 1,
-        "price": "928",
-        "link": "https:\/\/divtable.com\/generator\/"
+        "id": "5",
+        "name": "Calcium-Magnesium-Zinc Tablets",
+        "count": "120",
+        "price": "25",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "6",
+        "name": "Folic Acid Supplements",
+        "count": "60",
+        "price": "10",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "7",
+        "name": "Ginseng Supplements",
+        "count": "60",
+        "price": "30",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "8",
+        "name": "Evening Primrose Oil Capsules",
+        "count": "90",
+        "price": "35",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "9",
+        "name": "Maca Root Powder",
+        "count": "50",
+        "price": "25",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "10",
+        "name": "Saw Palmetto Supplements",
+        "count": "60",
+        "price": "20",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "11",
+        "name": "Glucomannan Capsules",
+        "count": "90",
+        "price": "30",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "12",
+        "name": "GABA Supplements",
+        "count": "60",
+        "price": "25",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "13",
+        "name": "Resveratrol Capsules",
+        "count": "120",
+        "price": "40",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "14",
+        "name": "Alpha Lipoic Acid Supplements",
+        "count": "60",
+        "price": "35",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "15",
+        "name": "Ginger Root Supplements",
+        "count": "90",
+        "price": "20",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "16",
+        "name": "L-Carnitine Capsules",
+        "count": "60",
+        "price": "30",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "17",
+        "name": "Boswellia Serrata Supplements",
+        "count": "60",
+        "price": "25",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "18",
+        "name": "MCT Oil Supplements",
+        "count": "120",
+        "price": "35",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "19",
+        "name": "Quercetin Capsules",
+        "count": "60",
+        "price": "20",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "20",
+        "name": "Chlorella Tablets",
+        "count": "90",
+        "price": "25",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "21",
+        "name": "Coconut Oil Softgels",
+        "count": "60",
+        "price": "30",
+        "link": "https://www.example.com"
+    },
+    {
+        "id": "22",
+        "name": "Spirulina Capsules",
+        "count": "120",
+        "price": "40",
+        "link": "https://www.example.com"
     }
 ]
